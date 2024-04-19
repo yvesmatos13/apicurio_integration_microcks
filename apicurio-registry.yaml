@@ -1,0 +1,39 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: apicurito-registry
+spec:
+  replicas: 1
+  selector:
+    app: apicurito-registry
+  template:
+    metadata:
+      labels:
+        app: apicurito-registry
+    spec:
+      containers:
+      - name: apicurito-registry
+        image: apicurio/apicurio-registry-mem:2.5.10.Final
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: apicurito-registry
+spec:
+  selector:
+    app: apicurito-registry
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: apicurito-registry
+spec:
+  to:
+    kind: Service
+    name: apicurito-registry
