@@ -1,3 +1,7 @@
+# Criação do projeto 
+
+oc new-project api-designer
+
 # Instalação do operador Microcks
 
 https://microcks.io/documentation/installing/operator/
@@ -15,9 +19,7 @@ API_ROUTE
 WS_ROUTE
 AUTH_ROUTE
 
-# Crie o projeto e adicione o template
-
-oc new-project nome_do_projeto
+# Crie o projeto e Adicione o template
 
 oc create -f apicurio-standalone-template.yml
 
