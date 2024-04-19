@@ -24,7 +24,7 @@ AUTH_ROUTE
 
 # Crie o projeto e Adicione o template
 
-oc create -f apicurio-standalone-template.yml
+oc create -f apicurio-standalone-template.yml 
 
 oc process apicurio-studio-standalone | oc apply -f -
 
@@ -45,3 +45,11 @@ oc set env dc/apicurio-studio-ui APICURIO_MICROCKS_CLIENT_SECRET=ab54d329-e435-4
 oc set env dc/apicurio-studio-ui APICURIO_UI_FEATURE_MICROCKS=true
 
 oc set env dc/apicurio-studio-ui JAVA_TOOL_OPTIONS=-Dapicurio-ui.feature.microcks=true
+
+# Instalação ApiCurio Registry
+
+oc apply -f apicurio-registry.yaml
+
+# Instalação ApiCurio Desinger
+
+Fazer a instalação pelo operator hub
