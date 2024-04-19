@@ -15,8 +15,11 @@ oc apply -f microcks-install.yaml
 # Ajuste o dominio no template em:
 
 UI_ROUTE
+
 API_ROUTE
+
 WS_ROUTE
+
 AUTH_ROUTE
 
 # Crie o projeto e Adicione o template
