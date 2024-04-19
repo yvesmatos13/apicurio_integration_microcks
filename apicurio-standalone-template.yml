@@ -18,7 +18,7 @@ message: |-
   that the authentication component (Keycloak) requires additional configuration
   for it to support all Apicurio functionality (specifically account linking).
   In addition, you may want to configure Keycloak to your particular taste (for
-  apps.cluster-qw5dp.qw5dp.sandbox660.opentlc.com you may want to enable social logins).  To configure Keycloak you
+  example.com you may want to enable social logins).  To configure Keycloak you
   can go here (and log in with the Keycloak username/password listed above):
   
          Keycloak URL: https://${AUTH_ROUTE}/auth
@@ -791,22 +791,22 @@ parameters:
 - name: UI_ROUTE
   displayName: User Interface Route Name
   description: The route name to use for the UI.
-  value: apicurio-studio.apps.cluster-qw5dp.qw5dp.sandbox660.opentlc.com
+  value: apicurio-studio-api-designer.<domain>.com
   required: true
 - name: API_ROUTE
   displayName: API Route Name
   description: The route name to use for the API.
-  value: apicurio-studio-api.apps.cluster-qw5dp.qw5dp.sandbox660.opentlc.com
+  value: apicurio-studio-api-api-designer.<domain>.com
   required: true
 - name: WS_ROUTE
   displayName: Editing Route Name
   description: The route name to use for editing layer (websocket based).
-  value: apicurio-studio-ws.apps.cluster-qw5dp.qw5dp.sandbox660.opentlc.com
+  value: apicurio-studio-ws-api-designer.<domain>.com
   required: true
 - name: AUTH_ROUTE
   displayName: Authentication Route Name
   description: The route name to use for Keycloak Authentication.
-  value: apicurio-studio-auth.apps.cluster-qw5dp.qw5dp.sandbox660.opentlc.com
+  value: apicurio-studio-auth-api-designer.<domain>.opentlc.com
   required: true
 - name: GENERATED_DB_USER
   displayName: PostgreSQL Connection Username
