@@ -1,0 +1,22 @@
+apiVersion: microcks.github.io/v1alpha1
+kind: MicrocksInstall
+metadata:
+  name: microcks-api-designer
+  namespace: api-designer
+spec:
+  name: microcks-api-designer
+  version: 1.5.2
+  microcks:
+    replicas: 1
+    url: microcks-api-designer.<domain>.com
+  postman:
+    replicas: 1
+  keycloak:
+    install: true
+    persistent: true
+    volumeSize: 1Gi
+    url: microcks-api-designer-keycloak.<domain>.com
+  mongodb:
+    install: true
+    persistent: true
+    volumeSize: 2Gi
