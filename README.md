@@ -1,6 +1,10 @@
-# Instalação do Microcks
+# Instalação do operador Microcks
 
 https://microcks.io/documentation/installing/operator/
+
+# Instalação do Microcks
+
+oc apply -f microcks-install.yaml
 
 # Instalação API Curio Studio
 
@@ -17,7 +21,7 @@ oc new-project nome_do_projeto
 
 oc create -f apicurio-standalone-template.yml
 
-oc process -f caminho_do_template.yaml
+oc process apicurio-studio-standalone | oc apply -f -
 
 # Configure as variaveis
 
